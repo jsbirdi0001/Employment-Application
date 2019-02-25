@@ -22,7 +22,7 @@ namespace Employment_Application
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-
+             
             cname = (EditText)FindViewById(Resource.Id.name);
             cexperience = (EditText)FindViewById(Resource.Id.experience);
             cmarried = (RadioButton)FindViewById(Resource.Id.married);
