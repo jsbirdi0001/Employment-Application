@@ -4,29 +4,165 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/linearLayout1"
+		android:layout_marginLeft="8.5dp"
+		android:layout_marginRight="10.0dp">
+		<TextView
+			android:text="Employment Application"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAlignment = "center"
+			android:id="@+id/textView1"
+			android:padding="10px"
+			android:textColor="@android:color/holo_blue_dark"
+			android:background="#80000000"
+			android:backgroundTint="#ffbbdefb"
+			android:shadowColor="#ff0d47a1"
+			android:textSize="50px" />
+		<GridLayout
+			android:minWidth="25px"
+			android:minHeight="1000px"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:columnCount = "2"
+			android:id="@+id/gridLayout1">
+			<TextView
+				android:text="Name"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:id="@+id/textView2"
+				android:textSize="35px" />
+			<EditText
+				android:id="@+id/name"
+				android:width = "400px"
+				android:textSize = "35px"
+			/>
+			<TextView
+				android:text="Marital Status"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:id="@+id/textView3"
+				android:textSize="35px" />
+			<GridLayout
+				android:minWidth="500px"
+				android:minHeight="70px"
+				android:id="@+id/gridLayout2">
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation = "horizontal"
+					android:id="@+id/radioGroup1">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:checked="true"
+						android:text="Married"
+						android:id="@+id/married"
+						android:textSize="25px" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Single"
+						android:id="@+id/single"
+						android:textSize="25px" />
+				</RadioGroup>
+			</GridLayout>
+			<TextView
+				android:text="Qualification"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:id="@+id/textView4"
+				android:textSize="35px" />
+			<GridLayout
+				android:minWidth="500px"
+				android:minHeight="70px"
+				android:id="@+id/gridLayout3">
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:id="@+id/radioGroup2">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:checked="true"
+						android:text="Master"
+						android:id="@+id/master"
+						android:textSize="25px" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Bachelor"
+						android:id="@+id/bachelor"
+						android:textSize="25px" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Diploma"
+						android:id="@+id/diploma"
+						android:textSize="25px" />
+				</RadioGroup>
+			</GridLayout>
+			<TextView
+				android:text="Experience"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:id="@+id/textView5"
+				android:textSize="35px" />
+			<EditText
+				android:id="@+id/experience"
+				android:width = "400px"
+			/>
+			<TextView
+				android:text="Language"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:id="@+id/textView6"
+				android:textSize="35px" />
+			<GridLayout
+				android:minWidth="500px"
+				android:minHeight="70px"
+				android:id="@+id/gridLayout4">
+				<CheckBox
+					android:text="Eng"
+					android:id="@+id/english"
+					android:textSize="25px" />
+				<CheckBox
+					android:text="Fren"
+					android:id="@+id/french"
+					android:textSize="25px" />
+				<CheckBox
+					android:text="Spanish"
+					android:id="@+id/spanish"
+					android:textSize="25px" />
+			</GridLayout>
+			<Button
+				android:text="calculate"
+				android:id="@+id/calculate"
+				android:textSize="25px"
+				android:padding="12px"
+				android:maxWidth="100px" />
+			<Button
+				android:text="reset"
+				android:id="@+id/reset"
+				android:textSize="25px"
+				android:padding="12px"
+				android:width="100px" />
+			<TextView
+				android:text="Salary"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:id="@+id/textView7"
+				android:layout_marginTop="8.5dp"
+				android:textSize="35px" />
+			<TextView
+				android:text=".................................."
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:id="@+id/result"
+				android:layout_marginTop="8.5dp" />
+		</GridLayout>
+	</LinearLayout>
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_main" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </android.support.design.widget.CoordinatorLayout>

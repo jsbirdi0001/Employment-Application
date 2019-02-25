@@ -12,17 +12,31 @@ namespace Employment_Application
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        TextView cresult;
+        EditText cname, cexperience;
+        RadioButton cmarried, csingle, cmaster, cbachelor, cdiploma;
+        CheckBox cenglish, cfrench, cspanish;
+        Button ccalculate, creset;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
+            cname = (EditText)FindViewById(Resource.Id.name);
+            cexperience = (EditText)FindViewById(Resource.Id.experience);
+            cmarried = (RadioButton)FindViewById(Resource.Id.married);
+            csingle = (RadioButton)FindViewById(Resource.Id.single);
+            cmaster = (RadioButton)FindViewById(Resource.Id.master);
+            cbachelor = (RadioButton)FindViewById(Resource.Id.bachelor);
+            cdiploma = (RadioButton)FindViewById(Resource.Id.diploma);
+            cenglish = (CheckBox)FindViewById(Resource.Id.english);
+            cfrench = (CheckBox)FindViewById(Resource.Id.french);
+            cspanish = (CheckBox)FindViewById(Resource.Id.spanish);
+            ccalculate = (Button)FindViewById(Resource.Id.calculate);
+            creset = (Button)FindViewById(Resource.Id.reset);
+            cresult = (TextView)FindViewById(Resource.Id.result);
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
