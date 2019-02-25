@@ -32,7 +32,8 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:columnCount = "2"
-			android:id="@+id/gridLayout1">
+			android:id="@+id/gridLayout1"
+			android:layout_marginRight="0.0dp">
 			<TextView
 				android:text="Name"
 				android:textAppearance="?android:attr/textAppearanceMedium"
@@ -42,6 +43,7 @@
 				android:id="@+id/name"
 				android:width = "400px"
 				android:textSize = "35px"
+				android:textColor="#ff000000" 
 			/>
 			<TextView
 				android:text="Marital Status"
@@ -114,6 +116,7 @@
 			<EditText
 				android:id="@+id/experience"
 				android:width = "400px"
+				android:textColor="#ff000000" 
 			/>
 			<TextView
 				android:text="Language"
@@ -159,7 +162,11 @@
 				android:text=".................................."
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:id="@+id/result"
-				android:layout_marginTop="8.5dp" />
+				android:layout_marginTop="8.5dp"
+				android:textSize="30px"
+				android:textColor="#ff1565c0"
+				android:background="#ffb3e5fc"
+				android:padding="10px" />
 		</GridLayout>
 	</LinearLayout>
 

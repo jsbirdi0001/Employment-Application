@@ -37,6 +37,67 @@ namespace Employment_Application
             creset = (Button)FindViewById(Resource.Id.reset);
             cresult = (TextView)FindViewById(Resource.Id.result);
 
+            ccalculate.Click += delegate
+            {
+                double salary=0;
+
+                // Clicking the Married Radio Button
+                if (cmarried.Checked)
+                {
+                    salary += 3000;
+                }
+
+                // Clicking the Eduction Radio Buttons
+                if (cmaster.Checked)
+                {
+                    salary += 70000;
+                }
+                else if (cbachelor.Checked)
+                {
+                    salary += 60000;
+                }
+                else if (cdiploma.Checked)
+                {
+                    salary += 50000;
+                }
+
+                // Experience 
+                if(Convert.ToInt32(cexperience.Text) > 10)
+                {
+                    salary = salary + (salary * 0.10);
+                }
+
+                //Adding Language and Salary Accordingly
+                if (cenglish.Checked)
+                {
+                    salary += 1000;
+                }
+                if (cfrench.Checked)
+                {
+                    salary += 1000;
+                }
+                if (cspanish.Checked)
+                {
+                    salary += 1000;
+                }
+                cresult.Text = "The Salary of " + cname.Text + " is $"+ Convert.ToString(salary);
+            };
+
+            creset.Click += delegate
+             {
+                 cname.Text = "";
+                 cexperience.Text = "";
+                 cresult.Text = "";
+                 cmarried.Checked = false;
+                 csingle.Checked = false;
+                 cenglish.Checked = false;
+                 cspanish.Checked = false;
+                 cfrench.Checked = false;
+                 cbachelor.Checked = false;
+                 cmaster.Checked = false;
+                 cdiploma.Checked = false;
+             };
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
